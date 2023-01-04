@@ -1,4 +1,4 @@
-import { SYMBOLS_RANDOM } from '../../constants/symbols.constants';
+import { CAT_SYMBOLS, GIFT_SYMBOLS, SYMBOLS_RANDOM } from '../../constants/symbols.constants';
 import { HAS_TOUCH } from '../../constants/browser.constants';
 import { SlotMachine } from '../slot-machine/slot-machine.component';
 import { ToggleButton } from '../toggle-button/toggle-button.component';
@@ -243,8 +243,8 @@ export class App {
             this.mainElement,
             this.handleUseCoin,
             this.handleGetPrice,
-            5,
-            SYMBOLS_RANDOM,
+            2,
+            [CAT_SYMBOLS, GIFT_SYMBOLS],
             isFirstTime,
         );
 

@@ -19,3 +19,13 @@ export function createElement(className = '', content = '', angle = null, style 
 
     return element;
 }
+
+export function htmlToElement(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
+}
+
+export function toCatElement(name) {
+    return htmlToElement(`<img class="cat-img" src="cats/${ name }"></img>`);
+}

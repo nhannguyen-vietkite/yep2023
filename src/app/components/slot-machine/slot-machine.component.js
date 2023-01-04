@@ -116,7 +116,9 @@ export class SlotMachine {
         const { reelsContainer, reels } = this;
 
         for (let reelIndex = 0; reelIndex < reelCount; ++reelIndex) {
-            const reel = new SlotMachineReel(reelIndex, alpha, shuffledSymbols, diameter);
+            const reelSymbols = symbols[reelIndex];
+            const reelAlpha = 360 / reelSymbols.length;
+            const reel = new SlotMachineReel(reelIndex, reelAlpha, reelSymbols, diameter);
 
             reelsContainer.appendChild(reel.root);
             reels.push(reel);

@@ -93,15 +93,19 @@
         mix-blend-mode: color;
 
         &.is-win {
-            --displayShadowColor: rgba(127, 160, 0, 0.5);
+            // --displayShadowColor: rgba(127, 160, 0, 0.5);
 
-            background: rgb(127, 160, 0);
+            // background: rgb(127, 160, 0);
         }
 
         &.is-fail {
-            --displayShadowColor: rgba(255, 0, 0, 0.25);
+            // --displayShadowColor: rgba(255, 0, 0, 0.25);
 
-            background: rgb(255, 0, 0);
+            // background: rgb(255, 0, 0);
+
+            //     --displayShadowColor: rgba(127, 160, 0, 0.25);
+
+            //     background: #f6f5106e
         }
     }
 }

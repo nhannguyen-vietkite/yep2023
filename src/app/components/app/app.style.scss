@@ -47,3 +47,15 @@
         background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0));
     }
 }
+
+.cat-img {
+    width: 100%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.gift-number {
+    position: absolute;
+    font-size: 21px;
+    left: 51px;
+    transform: translateY(18px);
+}
