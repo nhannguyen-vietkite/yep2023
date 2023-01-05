@@ -27,5 +27,9 @@ export function htmlToElement(html) {
 }
 
 export function toCatElement(name) {
-    return htmlToElement(`<img class="cat-img" src="cats/${ name }"></img>`);
+    return htmlToElement(`<img class="cat-img" src="people/${ name }"></img>`);
+}
+
+export function toGiftElement(name) {
+    return htmlToElement(`<img class="gift-img" src="gifts/${ name }"></img>`);
 }

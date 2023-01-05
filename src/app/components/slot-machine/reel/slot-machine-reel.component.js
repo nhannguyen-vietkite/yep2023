@@ -60,7 +60,7 @@ export class SlotMachineReel {
         const shadowCount = this.shadowCount = Math.max(2, Math.round((diameter - 0.5 - (2 * index)) * Math.PI / symbols.length));
         const beta = 1 / shadowCount;
 
-        shuffle(symbols);
+        // shuffle(symbols);
 
         symbols.forEach((symbol, symbolIndex) => {
             const cellFigure = createElement(C_FIGURE, symbol);

@@ -1,29 +1,123 @@
-import { htmlToElement, toCatElement } from '../utils/dom.util';
+import { htmlToElement, toCatElement, toGiftElement } from '../utils/dom.util';
 
 export const SYMBOLS_CLASSIC = [
-    '🍋', '🍊', '🍉', '🍈', '🍇', '🥝', '🍓', '🍒', '🌟', '🍀', '💎', '🎰'];
+    '🍋',
+    '🍊',
+    '🍉',
+    '🍈',
+    '🍇',
+    '🥝',
+    '🍓',
+    '🍒',
+    '🌟',
+    '🍀',
+    '💎',
+    '🎰',
+];
 
 export const SYMBOLS_CHRISTMAS = [
-    '🧣', '⛄', '🎄', '🎁', '🎀', '🍾', '🍷', '🔔', '🌟', '🦌', '🎅'];
+    '🧣',
+    '⛄',
+    '🎄',
+    '🎁',
+    '🎀',
+    '🍾',
+    '🍷',
+    '🔔',
+    '🌟',
+    '🦌',
+    '🎅',
+];
 
 export const SYMBOLS_HALLOWEEN = [
-    '🌚', '🎃', '🦇', '😈', '🧠', '👹', '👽', '🤡', '👻', '🧟‍', '🧛‍', '💀'];
+    '🌚',
+    '🎃',
+    '🦇',
+    '😈',
+    '🧠',
+    '👹',
+    '👽',
+    '🤡',
+    '👻',
+    '🧟‍',
+    '🧛‍',
+    '💀',
+];
 
 export const SYMBOLS_ANIMALS = [
-    '🐞', '🐟', '🐭', '🐸', '🐓', '🐷', '🦀', '🐍', '🦊‍', '🦁', '🦕', '🦖'];
+    '🐞',
+    '🐟',
+    '🐭',
+    '🐸',
+    '🐓',
+    '🐷',
+    '🦀',
+    '🐍',
+    '🦊‍',
+    '🦁',
+    '🦕',
+    '🦖',
+];
 
 export const SYMBOLS_SPORTS = [
-    '🎯', '🎱', '🏐', '⛳', '⚾', '🏈', '🏀', '⚽', '🥉', '🥈', '🥇', '🏆'];
+    '🎯',
+    '🎱',
+    '🏐',
+    '⛳',
+    '⚾',
+    '🏈',
+    '🏀',
+    '⚽',
+    '🥉',
+    '🥈',
+    '🥇',
+    '🏆',
+];
 
 export const SYMBOLS_LOVE = [
-    '💌', '🎁', '📸', '💘', '💋', '🔞', '💑', '💍', '💎', '💖',
+    '💌',
+    '🎁',
+    '📸',
+    '💘',
+    '💋',
+    '🔞',
+    '💑',
+    '💍',
+    '💎',
+    '💖',
 ];
 
 export const SYMBOLS_FORTUNE = [
-    '🎴', '🎲', '🕶', '🥃', '💷', '💴', '💵', '💰', '🍀', '💎', '🎰', '🧞‍️', '🃏'];
+    '🎴',
+    '🎲',
+    '🕶',
+    '🥃',
+    '💷',
+    '💴',
+    '💵',
+    '💰',
+    '🍀',
+    '💎',
+    '🎰',
+    '🧞‍️',
+    '🃏',
+];
 
 export const SYMBOLS_FOOD = [
-    '🥦', '🍋', '🍆', '🍙', '🍯', '🍑', '🍓', '🍭', '🍫', '🍩', '🍕', '🍗', '🥩', '🍣',
+    '🥦',
+    '🍋',
+    '🍆',
+    '🍙',
+    '🍯',
+    '🍑',
+    '🍓',
+    '🍭',
+    '🍫',
+    '🍩',
+    '🍕',
+    '🍗',
+    '🥩',
+    '🍣',
 ];
 
 export const ALL_SYMBOLS = [
@@ -37,23 +131,94 @@ export const ALL_SYMBOLS = [
     SYMBOLS_FOOD,
 ];
 
-export const SYMBOLS_RANDOM = ALL_SYMBOLS[Math.random() * ALL_SYMBOLS.length | 0];
+export const SYMBOLS_RANDOM
+    = ALL_SYMBOLS[(Math.random() * ALL_SYMBOLS.length) | 0];
 
-
-export const CAT_SYMBOLS = [
-    toCatElement('meo-beo.jpg'),
-    toCatElement('meo-beo.jpg'),
-    toCatElement('meo-nobita.png'),
+const PEOPLE_NAMES = [
+    'binh',
+    'danh',
+    'dao',
+    'hai',
+    'hau',
+    'hung',
+    'huy-dang',
+    'huy-tran',
+    'khanh',
+    'khoa',
+    'khon',
+    'lien',
+    'loc',
+    'long',
+    'mi',
+    'nhan',
+    'nhu',
+    'nu',
+    'shaffat',
+    'son',
+    'tam',
+    'than',
+    'thanh',
+    'thien-diep',
+    'thien-nguyen',
+    'thuan',
+    'thuc-doan',
+    'thuc-trieu',
+    'tin',
+    'tri',
+    'trieu',
+    'truong',
+    'tuan-tran',
+    'tuan-vo',
+    'tue',
+    'uyen',
+    'vinh-pham',
+    'vinh-vo',
 ];
 
-export const GIFT_SYMBOLS = [
-    htmlToElement('<div>🎁 <span class="gift-number">1</span></div>'),
-    htmlToElement('<div>🎁 <span class="gift-number">2</span></div>'),
-    htmlToElement('<div>🎁 <span class="gift-number">3</span></div>'),
-    htmlToElement('<div>🎁 <span class="gift-number">4</span></div>'),
-    htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
-    htmlToElement('<div>🎁 <span class="gift-number">6</span></div>'),
+export const CAT_SYMBOLS = PEOPLE_NAMES.map((name) => toCatElement(`${ name }.png`));
+
+const GIFTS = [
+    'prize-2',
+    'prize-3',
+    'prize-1',
+    'gift-8',
+    'gift-9',
+    'gift-4',
+    'gift-5',
+    'gift-7',
+    'gift-6',
+    'gift-12',
+    'gift-13',
+    'gift-11',
 ];
+export const GIFT_SYMBOLS = GIFTS.map((name) => toGiftElement(`${ name }.png`));
+// [
+//     htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">1</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">2</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">3</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">4</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">6</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">1</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">2</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">3</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">4</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">6</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">1</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">2</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">3</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">4</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">6</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">1</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">2</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">3</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">4</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">5</span></div>'),
+//     htmlToElement('<div>🎁 <span class="gift-number">6</span></div>'),
+// ];
 
 // export const GIFT_SYMBOLS = [
 //     '🎁 1',
