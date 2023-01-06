@@ -5,8 +5,10 @@ const extension = IS_FIREFOX ? 'ogg' : 'mp3';
 const blipSound = new SoundBuffer(`./sounds/blip.${ extension }`, 32);
 const coinSound = new SoundBuffer(`./sounds/coin.${ extension }`);
 const stopSound = new SoundBuffer(`./sounds/stop.${ extension }`);
-const unluckySound = new SoundBuffer(`./sounds/unlucky.${ extension }`);
-const winSound = new SoundBuffer(`./sounds/win.${ extension }`);
+// const unluckySound = new SoundBuffer(`./sounds/unlucky.${ extension }`);
+// const winSound = new SoundBuffer(`./sounds/win.${ extension }`);
+const unluckySound = new SoundBuffer('./sounds/children_yay.mp3');
+const winSound = new SoundBuffer('./sounds/children_yay.mp3');
 
 let isEnabled = true;
 
